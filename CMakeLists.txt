@@ -11,7 +11,7 @@ find_package(Qt5 COMPONENTS
         Core
         REQUIRED)
 
-add_executable(lab2 main.cpp Observer.h Observer.cpp)
+add_executable(lab2 main.cpp Observer.h Observer.cpp Subject.cpp Subject.h)
 target_link_libraries(lab2
         Qt5::Core
         )
