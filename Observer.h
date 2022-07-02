@@ -15,11 +15,11 @@ public:
 
 // Наблюдатель
 class FileObserver : IObserver {
-    QString name{};
-    size_t fileSize{0};
-    bool fileExist{false};
+    QString name{};              // название файла
+    size_t fileSize{0};          // размер файла
+    bool fileExist{false};       // существование файла
 public:
-    FileObserver(const QString&& obsname);     // Конструктор
+    FileObserver(const QString& obsname); // Конструктор
     void Update(size_t size, bool exist); // Метод, обновляющий лог о файле
 };
 

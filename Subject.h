@@ -11,7 +11,7 @@
 
 //  Класс, отслеживающий наблюдателей
 class ASubject {
-    std::vector<FileObserver*> list{};
+    std::vector<FileObserver*> list{};         // вектор наблюдателей
 public:
     void Attach(FileObserver* obs);            // Добавить наблюдателя
     void Detach(FileObserver* obs);            // Удалить наблюдателя
@@ -23,8 +23,8 @@ public:
 class ConcreteFile : public ASubject {
     QFile file;
 public:
-    ConcreteFile(const QString&& filename);    // Конструктор
-    void ChangeFile();                         // Метод для проверки изменений в файле
+    ConcreteFile(const QString& filename);    // Конструктор
+    void ChangeFile();                        // Метод для проверки изменений в файле
 };
 
 
